@@ -140,8 +140,11 @@
                     if(response.status == 200){
                         for(var i=0 ; i<this.users.length; i++)
                         {
-                            if(this.users[i].id==id)
-                                this.users.splice(i);
+                            if(this.users[i].id==id){
+                                this.users.splice(i, 1);
+                                break;
+                            }
+
                         }
                         this.fillCharts();
                     }else{
